@@ -41,7 +41,16 @@
 			</div>
 		</section>
 		<section class="sec is-img"></section>
-		<Products />
+		<div class="sec">
+			<div>
+				<div class="content alt align-items-center justify-content-center">
+
+					<h1 class="title">Avaialable now</h1>
+
+				</div>
+				<Products />
+			</div>
+		</div>
 
 		<section class="product p-0 sec scroll-area">
 			<div class="container-fluid p-0">
@@ -123,7 +132,7 @@
 										</p>
 										<p class="info">
 											<i class="ti-envelope"></i> General Support <br />
-											<span>info@mystudio.tech</span>
+											<span>info@airpods-store</span>
 										</p>
 									</div>
 

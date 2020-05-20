@@ -32,9 +32,9 @@
 					</div>
 				</div>
 				<div class="cart pl-1">
-					<a href="#">
-						<i class="ti-shopping-cart"></i>
-					</a>
+					<router-link to="/cart/" class="cart-link d-flex align-items-center">
+						<i class="ti-shopping-cart"></i> ({{this.$store.state.cart.length }})
+					</router-link>
 				</div>
 			</div>
 		</nav>
@@ -79,5 +79,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.cart-link {
+	color: var(--primary_color);
+	font-size: 14px;
+}
 
 </style>

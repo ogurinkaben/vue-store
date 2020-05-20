@@ -30,6 +30,9 @@
 									</a>
 									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
 										<li>
+											<router-link class="dropdown-item" to="/dashboard/">Dashboard </router-link>
+										</li>
+										<li>
 											<router-link class="dropdown-item" to="/dashboard/account">Profile </router-link>
 										</li>
 										<div class="dropdown-divider"></div>

@@ -285,7 +285,8 @@ button:focus {
 
 .top-nav {
 	display: flex;
-	justify-content: space-between;
+	justify-content
+: space-between;
 	background: #fff;
 	padding: 0.65rem 2rem;
 	min-height: 30px;

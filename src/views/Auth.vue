@@ -113,6 +113,7 @@ export default {
 			userState: "",
 			userCountry: "",
 			userPhoneNumber: "",
+			walletBalance: 4000,
 			address: "",
 			userPassword: null,
 			confirmUserPassword: null,
@@ -183,7 +184,8 @@ export default {
 									phoneNumber: this.userPhoneNumber,
 									state: this.userState,
 									country: this.userCountry,
-									address: this.address
+									address: this.address,
+									walletBalance: this.walletBalance
 								})
 								.then(function() {
 									console.log("User Created successfully!");

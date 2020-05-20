@@ -86,6 +86,15 @@ const routes = [{
           title: 'Dashboard - Manage Products',
         }
       },
+      {
+        path: "fund-wallet",
+        name: "Wallet",
+        component: () =>
+          import("../components/dashboard/Wallet.vue"),
+        meta: {
+          title: 'Dashboard - Wallet',
+        }
+      },
     ]
   }
 ];

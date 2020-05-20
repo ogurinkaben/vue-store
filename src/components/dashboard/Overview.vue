@@ -13,7 +13,7 @@
 							</div>
 							<div class="info">
 								<p>Wallet</p>
-								<h3>$300</h3>
+								<h3>{{walletBalance | currencyFormatted}}</h3>
 							</div>
 						</div>
 					</div>
@@ -30,11 +30,29 @@ export default {
 	data() {
 		return {
 			userEmail: null,
+			walletBalance: null
+		}
+	},
+	filters: {
+		currencyFormatted: function(value) {
+			return Number(value).toLocaleString("en-US", {
+				style: "currency",
+				currency: "USD"
+			});
 		}
 	},
 	created() {
 		const user = fb.auth().currentUser;
 		this.userEmail = user.email;
+		db.collection("users").doc(user.uid).get().then((doc) => {
+			if (doc.exists) {
+				this.walletBalance = doc.data().walletBalance;
+			} else {
+				console.log("No such document!");
+			}
+		}).catch(function(error) {
+			console.log("Error getting document:", error);
+		});
 	},
 	methods: {}
 };

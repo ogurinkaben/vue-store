@@ -1,6 +1,6 @@
 <template>
   <div class="products">
-    <section class="sec">
+    <section class="sec alt">
       <div class="container">
         <div class="row">
           <div class="col-lg-4" v-for="product in products">

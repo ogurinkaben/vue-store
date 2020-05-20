@@ -4,6 +4,7 @@
 </template>
 
 <script>
+import { fb } from '../firebase.js';
 export default {
 	name: "AddToCart",
 	components: {},
@@ -27,11 +28,19 @@ export default {
 	mounted() {},
 	methods: {
 		addToCart() {
-			this.$store.commit('addToCart', this.item)
-			Toast.fire({
-				icon: 'success',
-				title: 'Added to cart'
-			})
+			var user = fb.auth().currentUser;
+			if (user) {
+				this.$store.commit('addToCart', this.item)
+				Toast.fire({
+					icon: 'success',
+					title: 'Added to cart'
+				})
+			} else {
+				Toast.fire({
+					icon: 'error',
+					title: 'You need to create an account or login to perform that action'
+				})
+			}
 		}
 	}
 };

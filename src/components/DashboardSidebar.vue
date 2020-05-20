@@ -8,18 +8,18 @@
 					</span>
 					<div class="">
 						<ul class="nav nav-pills flex-column">
-							<li class="nav-item ">
+							<li class="nav-item " @click="toggleNav">
 								<router-link class="nav-link" to="/dashboard/"> Dashboard <span class="sr-only">(current)</span></router-link>
 							</li>
 							<li>
-							<li class="nav-item " v-if="isAdmin">
-								<router-link class="nav-link" to="manage-products" @click="toggleNav"> Manage Products </router-link>
+							<li class="nav-item " v-if="isAdmin" @click="toggleNav">
+								<router-link class="nav-link" to="manage-products"> Manage Products </router-link>
 							</li>
-							<li class="nav-item ">
-								<router-link class="nav-link" to="account" @click="toggleNav"> Profile </router-link>
+							<li class="nav-item " @click="toggleNav">
+								<router-link class="nav-link" to="account"> Profile </router-link>
 							</li>
-							<li class="nav-item ">
-								<a class="nav-link" href="./request.html" @click="toggleNav">Wallet</a>
+							<li class="nav-item " @click="toggleNav">
+								<router-link class="nav-link" to="fund-wallet">Fund Wallet</router-link>
 							</li>
 							<li class="nav-item ">
 								<router-link class="nav-link" to="/" @click="toggleNav"> Go to Website </router-link>
